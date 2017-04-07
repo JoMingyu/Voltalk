@@ -9,5 +9,5 @@ class Tags(Resource):
     def get(self):
         site_id = info.site_ids[request.args.get('where')]
 
-        response = requests.get(info.URL + 'sites/' + site_id + '/tags')
+        response = requests.get(info.URL + 'sites/' + site_id + '/tags', headers=info.headers)
         return response.text

@@ -24,7 +24,6 @@ class Observer(threading.Thread):
             for id in info.site_ids.keys():
                 response = requests.get(info.URL + 'sites/' + info.site_ids[id] + '/usages/periodic', headers=info.headers, params=params)
                 json_obj = json.loads(response.text)
-                print(time.time(), id, json_obj['usage'])
                 if usages[id] is None:
                     usages[id] = json_obj['usage']
                 else:

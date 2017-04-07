@@ -16,6 +16,7 @@ class SiteRealTime(Resource):
 
         response = requests.get(info.URL + 'sites/' + site_id + '/usages/realtime', headers=info.headers)
         json_obj = json.loads(response.text)
+        print(json_obj)
         json_obj['activePower'] = unit_conversion.convert(json_obj['activePower'])
         return json_obj
 
@@ -43,6 +44,7 @@ class SiteToday(Resource):
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers, params=params)
         json_obj = json.loads(response.text)
+        print(json_obj)
         json_obj['usage'] = unit_conversion.convert(json_obj['usage'])
         return json_obj
 

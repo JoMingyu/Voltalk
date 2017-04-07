@@ -11,6 +11,3 @@ client = fbchat.Client(username, password)
 # friend = friends[0]
 # print(friend.uid)
 sent = client.send(target_uid, '서울대 3동 전기사용량 알려줘')
-time.sleep(2)
-
-print(client.getThreadInfo(target_uid, 1)[0].body)

@@ -13,10 +13,16 @@ from restful_modules import tags
 # tag : 디바이스에 등록되는 하나의 기기
 
 from restful_modules import usage
+# 전기 사용량
 
 from restful_modules import fare
+# 전기료
+
+from restful_modules import chatbot_relay
+# 챗봇 커넥터
 
 from support import observer
+# 전기 사용량 변동 디텍터
 
 app = Flask(__name__)
 api = Api(app)
@@ -40,6 +46,8 @@ api.add_resource(usage.TagToday, '/usage/site/today')
 
 api.add_resource(fare.SiteCurrent, '/fare/site')
 api.add_resource(fare.DeviceCurrent, '/fare/device')
+
+api.add_resource(chatbot_relay.ChatBot, '/chatbot')
 
 if __name__ == "__main__":
     print('-- Server Started -- ')

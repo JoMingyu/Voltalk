@@ -5,7 +5,13 @@ import requests
 from enertalk_infos import info
 
 
-class Usage(Resource):
+class Site(Resource):
     def get(self):
         where = request.args.get('where')
-        
+
+        return '', 200
+
+
+class Device(Resource):
+    def get(self):
+        pass

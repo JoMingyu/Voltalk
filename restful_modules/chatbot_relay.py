@@ -15,6 +15,9 @@ class ChatBot(Resource):
         client.send(self.target_uid, msg)
         time.sleep(2)
         recieved_msg = client.getThreadInfo(self.target_uid, 3)
+        s = '부터'
+        print('부터'.encode('utf-8'))
+
         if '부터' in msg or '까지' in msg:
             # period
             for msg in recieved_msg:

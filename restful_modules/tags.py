@@ -5,7 +5,5 @@ import requests
 from enertalk_infos import info
 
 
-class Usage(Resource):
-    def get(self):
-        where = request.args.get('where')
-        
+class Tags(Resource):
+    where = request.args.get('where')

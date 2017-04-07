@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
 
-from flask import request
-from flask_restful import Resource
+import fbchat
+import time
 
+username = 'dmdkzm3@naver.com'
+password = 'uursty67a9e9e4'
+target_uid = '126982884508007'
+client = fbchat.Client(username, password)
+# friends = client.getUsers('김성훈')
+# friend = friends[0]
+# print(friend.uid)
+sent = client.send(target_uid, '서울대 3동 전기사용량 알려줘')
+time.sleep(2)
 
-class Test(Resource):
-    def get(self):
-        print(request.args.get('test'))
-        return '', 200
+print(client.getThreadInfo(target_uid, 1)[0].body)

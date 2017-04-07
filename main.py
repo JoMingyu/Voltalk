@@ -16,6 +16,8 @@ from restful_modules import usage
 
 from restful_modules import fare
 
+from support import observer
+
 app = Flask(__name__)
 api = Api(app)
 
@@ -41,4 +43,5 @@ api.add_resource(fare.DeviceCurrent, '/fare/device')
 
 if __name__ == "__main__":
     print('-- Server Started -- ')
+    observer.Observer().start()
     app.run(host='192.168.0.33', port=80)

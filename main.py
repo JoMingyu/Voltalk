@@ -16,8 +16,6 @@ from restful_modules import usage
 
 from restful_modules import fare
 
-import test
-
 app = Flask(__name__)
 api = Api(app)
 
@@ -40,8 +38,6 @@ api.add_resource(usage.TagToday, '/usage/site/today')
 
 api.add_resource(fare.SiteCurrent, '/fare/site')
 api.add_resource(fare.DeviceCurrent, '/fare/device')
-
-api.add_resource(test.Test, '/test')
 
 if __name__ == "__main__":
     print('-- Server Started -- ')

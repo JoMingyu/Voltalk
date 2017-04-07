@@ -13,7 +13,7 @@ from enertalk_infos import info
 class SiteCurrent(Resource):
     def get(self):
         site_id = info.site_ids[request.args.get('where')]
-        cur_month_str = datetime.datetime.now().strftime('%Y-%m-' + '01')
+        cur_month_str = time_manager.date_to_timestamp(datetime.datetime.now().strftime('%Y-%m-' + '01'))
         now = time_manager.datetime_to_timestamp(time_manager.get_cur_datetime())
 
         params = {'start': cur_month_str, 'end': now}
@@ -24,7 +24,7 @@ class SiteCurrent(Resource):
 class DeviceCurrent(Resource):
     def get(self):
         device = request.args.get('device')
-        cur_month_str = datetime.datetime.now().strftime('%Y-%m-' + '01')
+        cur_month_str = time_manager.date_to_timestamp(datetime.datetime.now().strftime('%Y-%m-' + '01'))
         now = time_manager.datetime_to_timestamp(time_manager.get_cur_datetime())
 
         params = {'start': cur_month_str, 'end': now}

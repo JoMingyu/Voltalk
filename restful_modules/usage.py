@@ -6,6 +6,7 @@ import json
 
 import requests
 from support import time_manager
+from support import unit_conversion
 from enertalk_infos import info
 
 
@@ -14,7 +15,9 @@ class SiteRealTime(Resource):
         site_id = info.site_ids[request.args.get('where')]
 
         response = requests.get(info.URL + 'sites/' + site_id + '/usages/realtime', headers=info.headers)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['activePower'] = unit_conversion.convert(json_obj['activePower'])
+        return json_obj
 
 
 class SitePeriod(Resource):
@@ -25,7 +28,9 @@ class SitePeriod(Resource):
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers, params=params)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['usage'] = unit_conversion.convert(json_obj['usage'])
+        return json_obj
 
 
 class SiteToday(Resource):
@@ -37,7 +42,9 @@ class SiteToday(Resource):
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers, params=params)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['usage'] = unit_conversion.convert(json_obj['usage'])
+        return json_obj
 
 
 class DeviceRealTime(Resource):
@@ -45,7 +52,9 @@ class DeviceRealTime(Resource):
         device = request.args.get('device')
 
         response = requests.get(info.URL + 'devices/' + device + '/usages/realtime', headers=info.headers)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['activePower'] = unit_conversion.convert(json_obj['activePower'])
+        return json_obj
 
 
 class DevicePeriod(Resource):
@@ -56,7 +65,9 @@ class DevicePeriod(Resource):
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'devices/' + device + '/usages/periodic', headers=info.headers, params=params)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['usage'] = unit_conversion.convert(json_obj['usage'])
+        return json_obj
 
 
 class DeviceToday(Resource):
@@ -68,7 +79,9 @@ class DeviceToday(Resource):
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'devices/' + device + '/usages/periodic', headers=info.headers, params=params)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['usage'] = unit_conversion.convert(json_obj['usage'])
+        return json_obj
 
 
 class TagRealTime(Resource):
@@ -77,7 +90,9 @@ class TagRealTime(Resource):
         tag_id = request.args.get('tag')
 
         response = requests.get(info.URL + 'sites/' + site_id + '/tags/' + tag_id + '/usages/realtime', headers=info.headers)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['activePower'] = unit_conversion.convert(json_obj['activePower'])
+        return json_obj
 
 
 class TagPeriod(Resource):
@@ -89,7 +104,9 @@ class TagPeriod(Resource):
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/tags/' + tag_id + '/usages/periodic', headers=info.headers, params=params)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['usage'] = unit_conversion.convert(json_obj['usage'])
+        return json_obj
 
 
 class TagToday(Resource):
@@ -102,4 +119,6 @@ class TagToday(Resource):
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/tags/' + tag_id + '/usages/periodic', headers=info.headers, params=params)
-        return json.loads(response.text)
+        json_obj = json.loads(response.text)
+        json_obj['usage'] = unit_conversion.convert(json_obj['usage'])
+        return json_obj

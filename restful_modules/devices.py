@@ -1,5 +1,6 @@
 from flask_restful import Resource
 from flask import request
+import json
 
 import requests
 from enertalk_infos import info
@@ -10,4 +11,4 @@ class Devices(Resource):
         site_id = info.site_ids[request.args.get('where')]
 
         response = requests.get(info.URL + 'sites/' + site_id + '/devices', headers=info.headers)
-        return response.text
+        return json.loads(response.text)

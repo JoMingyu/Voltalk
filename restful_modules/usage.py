@@ -1,5 +1,6 @@
 from flask_restful import Resource
 from flask import request
+import json
 
 import requests
 from support import time_manager
@@ -11,7 +12,7 @@ class SiteRealTime(Resource):
         site_id = info.site_ids[request.args.get('where')]
 
         response = requests.get(info.URL + 'sites/' + site_id + '/usages/realtime', headers=info.headers)
-        return response.text
+        return json.loads(response.text)
 
 
 class SitePeriod(Resource):
@@ -20,7 +21,8 @@ class SitePeriod(Resource):
         start = time_manager.datetime_to_timestamp(request.args.get('start'))
         end = time_manager.datetime_to_timestamp(request.args.get('end'))
 
-
+        params = {'start': start, 'end': end}
+        response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers)
         pass
 
 
@@ -29,14 +31,14 @@ class DeviceRealTime(Resource):
         device = request.args.get('device')
 
         response = requests.get(info.URL + 'devices/' + device + '/usages/realtime', headers=info.headers)
-        return response.text
+        return json.loads(response.text)
 
 
 class DevicePeriod(Resource):
     def get(self):
         device = request.args.get('device')
-        start = request.args.get('start')
-        end = request.args.get('end')
+        start = time_manager.datetime_to_timestamp(request.args.get('start'))
+        end = time_manager.datetime_to_timestamp(request.args.get('end'))
 
         pass
 
@@ -54,7 +56,7 @@ class TagPeriod(Resource):
     def get(self):
         site_id = info.site_ids[request.args.get('where')]
         tag_id = request.args.get('tag')
-        start = request.args.get('start')
-        end = request.args.get('end')
+        start = time_manager.datetime_to_timestamp(request.args.get('start'))
+        end = time_manager.datetime_to_timestamp(request.args.get('end'))
 
         pass

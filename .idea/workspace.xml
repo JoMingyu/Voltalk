@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf5f843-18a0-4b6e-ad66-7b7ae8dd34b3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restful_modules/fare.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enertalk_infos/info.py" afterPath="$PROJECT_DIR$/enertalk_infos/info.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful_modules/fare.py" afterPath="$PROJECT_DIR$/restful_modules/fare.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful_modules/sites.py" afterPath="$PROJECT_DIR$/restful_modules/sites.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful_modules/usage.py" afterPath="$PROJECT_DIR$/restful_modules/usage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/support/time_manager.py" afterPath="$PROJECT_DIR$/support/time_manager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,13 +22,13 @@
     <splitter split-orientation="horizontal" split-proportion="0.5921717">
       <split-first>
         <leaf>
-          <file leaf-file-name="fare.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/restful_modules/fare.py">
+          <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <state relative-caret-position="313">
+                  <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
                   <folding>
-                    <element signature="e#25#59#0" expanded="true" />
+                    <element signature="e#25#48#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -36,8 +37,8 @@
           <file leaf-file-name="sites.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/restful_modules/sites.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="31" />
+                <state relative-caret-position="288">
+                  <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
                   <folding>
                     <element signature="e#25#59#0" expanded="true" />
                   </folding>
@@ -45,11 +46,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="usage.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="info.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/enertalk_infos/info.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="3" column="200" lean-forward="false" selection-start-line="3" selection-start-column="200" selection-end-line="3" selection-end-column="200" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="usage.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/restful_modules/usage.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2206">
-                  <caret line="102" column="15" lean-forward="true" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
+                <state relative-caret-position="244">
+                  <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
                   <folding>
                     <element signature="e#25#59#0" expanded="true" />
                   </folding>
@@ -57,13 +68,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/main.py">
+          <file leaf-file-name="time_manager.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/support/time_manager.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="522">
-                  <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+                <state relative-caret-position="336">
+                  <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="fare.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/restful_modules/fare.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="624">
+                  <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding>
-                    <element signature="e#25#48#0" expanded="true" />
+                    <element signature="e#25#59#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -108,14 +129,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/restful_modules/devices.py" />
-        <option value="$PROJECT_DIR$/restful_modules/sites.py" />
         <option value="$PROJECT_DIR$/restful_modules/tags.py" />
-        <option value="$PROJECT_DIR$/restful_modules/fare.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/enertalk_infos/info.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/support/time_manager.py" />
         <option value="$PROJECT_DIR$/restful_modules/usage.py" />
+        <option value="$PROJECT_DIR$/restful_modules/fare.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/restful_modules/sites.py" />
+        <option value="$PROJECT_DIR$/enertalk_infos/info.py" />
+        <option value="$PROJECT_DIR$/support/time_manager.py" />
       </list>
     </option>
   </component>
@@ -344,8 +365,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.time_manager" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.time_manager" />
         <item index="2" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -410,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491563059415</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="time_manager 모듈 기능추가, 하루 단위 불러오는 기능 추가 등">
+      <created>1491568619670</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1491568619670</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -447,7 +475,8 @@
     <MESSAGE value="json 인코딩 관련 문제 해결" />
     <MESSAGE value="usage 모듈 완성" />
     <MESSAGE value="UTF8 코딩 명시 작업" />
-    <option name="LAST_COMMIT_MESSAGE" value="UTF8 코딩 명시 작업" />
+    <MESSAGE value="time_manager 모듈 기능추가, 하루 단위 불러오는 기능 추가 등" />
+    <option name="LAST_COMMIT_MESSAGE" value="time_manager 모듈 기능추가, 하루 단위 불러오는 기능 추가 등" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -482,26 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful_modules/sites.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <element signature="e#25#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful_modules/fare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restful_modules/devices.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -509,14 +518,6 @@
           <folding>
             <element signature="e#25#59#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enertalk_infos/info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -530,33 +531,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/support/time_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        <state relative-caret-position="313">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding>
             <element signature="e#25#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful_modules/usage.py">
+    <entry file="file://$PROJECT_DIR$/restful_modules/sites.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2206">
-          <caret line="102" column="15" lean-forward="true" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
+        <state relative-caret-position="288">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="e#25#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enertalk_infos/info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="200" lean-forward="false" selection-start-line="3" selection-start-column="200" selection-end-line="3" selection-end-column="200" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful_modules/fare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful_modules/usage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding>
+            <element signature="e#25#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/support/time_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

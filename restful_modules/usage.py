@@ -3,7 +3,6 @@
 from flask_restful import Resource
 from flask import request
 import json
-import time
 
 import requests
 from support import time_manager
@@ -21,8 +20,8 @@ class SiteRealTime(Resource):
 class SitePeriod(Resource):
     def get(self):
         site_id = info.site_ids[request.args.get('where')]
-        start = time_manager.datetime_to_timestamp(request.args.get('start'))
-        end = time_manager.datetime_to_timestamp(request.args.get('end'))
+        start = time_manager.date_to_timestamp(request.args.get('start'))
+        end = time_manager.date_to_timestamp(request.args.get('end'))
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers, params=params)
@@ -33,9 +32,8 @@ class SiteToday(Resource):
     def get(self):
         # 오늘 에너지 사용량 조회
         site_id = info.site_ids[request.args.get('where')]
-        start = time_manager.date_to_timestamp(time_manager.get_cur_datetime())
-        end = time_manager.datetime_to_timestamp(request.args.get('date'))
-        # today
+        start = time_manager.date_to_timestamp(request.args.get('date'))
+        end = time_manager.datetime_to_timestamp(time_manager.get_cur_datetime())
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers, params=params)
@@ -53,8 +51,8 @@ class DeviceRealTime(Resource):
 class DevicePeriod(Resource):
     def get(self):
         device = request.args.get('device')
-        start = time_manager.datetime_to_timestamp(request.args.get('start'))
-        end = time_manager.datetime_to_timestamp(request.args.get('end'))
+        start = time_manager.date_to_timestamp(request.args.get('start'))
+        end = time_manager.date_to_timestamp(request.args.get('end'))
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'devices/' + device + '/usages/periodic', headers=info.headers, params=params)
@@ -64,8 +62,8 @@ class DevicePeriod(Resource):
 class DeviceToday(Resource):
     def get(self):
         device = request.args.get('device')
-        start = time_manager.date_to_timestamp(time_manager.get_cur_datetime())
-        end = time_manager.datetime_to_timestamp(request.args.get('date'))
+        start = time_manager.date_to_timestamp(request.args.get('date'))
+        end = time_manager.datetime_to_timestamp(time_manager.get_cur_datetime())
         # today
 
         params = {'start': start, 'end': end}
@@ -86,8 +84,8 @@ class TagPeriod(Resource):
     def get(self):
         site_id = info.site_ids[request.args.get('where')]
         tag_id = request.args.get('tag')
-        start = time_manager.datetime_to_timestamp(request.args.get('start'))
-        end = time_manager.datetime_to_timestamp(request.args.get('end'))
+        start = time_manager.date_to_timestamp(request.args.get('start'))
+        end = time_manager.date_to_timestamp(request.args.get('end'))
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/tags/' + tag_id + '/usages/periodic', headers=info.headers, params=params)
@@ -98,8 +96,8 @@ class TagToday(Resource):
     def get(self):
         site_id = info.site_ids[request.args.get('where')]
         tag_id = request.args.get('tag')
-        start = time_manager.date_to_timestamp(time_manager.get_cur_datetime())
-        end = time_manager.datetime_to_timestamp(request.args.get('date'))
+        start = time_manager.date_to_timestamp(request.args.get('date'))
+        end = time_manager.datetime_to_timestamp(time_manager.get_cur_datetime())
         # today
 
         params = {'start': start, 'end': end}

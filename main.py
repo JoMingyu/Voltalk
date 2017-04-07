@@ -14,6 +14,8 @@ from restful_modules import tags
 
 from restful_modules import usage
 
+from restful_modules import fare
+
 import test
 
 app = Flask(__name__)
@@ -30,11 +32,14 @@ api.add_resource(usage.SiteToday, '/usage/site/today')
 
 api.add_resource(usage.DeviceRealTime, '/usage/device')
 api.add_resource(usage.DevicePeriod, '/usage/device/period')
-api.add_resource(usage.DeviceToday, '/usage/site/today')
+api.add_resource(usage.DeviceToday, '/usage/device/today')
 
 api.add_resource(usage.TagRealTime, '/usage/tag')
 api.add_resource(usage.TagPeriod, '/usage/tag/period')
 api.add_resource(usage.TagToday, '/usage/site/today')
+
+api.add_resource(fare.SiteCurrent, '/fare/site')
+api.add_resource(fare.DeviceCurrent, '/fare/device')
 
 api.add_resource(test.Test, '/test')
 

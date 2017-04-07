@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from support import time_manager
 
 time_str = '2017-04-16 15:14:50'

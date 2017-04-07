@@ -22,8 +22,8 @@ class SitePeriod(Resource):
         end = time_manager.datetime_to_timestamp(request.args.get('end'))
 
         params = {'start': start, 'end': end}
-        response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers)
-        pass
+        response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers, params=params)
+        return json.loads(response.text)
 
 
 class DeviceRealTime(Resource):
@@ -40,7 +40,9 @@ class DevicePeriod(Resource):
         start = time_manager.datetime_to_timestamp(request.args.get('start'))
         end = time_manager.datetime_to_timestamp(request.args.get('end'))
 
-        pass
+        params = {'start': start, 'end': end}
+        response = requests.get(info.URL + 'devices/' + device + '/usages/periodic', headers=info.headers, params=params)
+        return json.loads(response.text)
 
 
 class TagRealTime(Resource):
@@ -49,7 +51,7 @@ class TagRealTime(Resource):
         tag_id = request.args.get('tag')
 
         response = requests.get(info.URL + 'sites/' + site_id + '/tags/' + tag_id + '/usages/realtime', headers=info.headers)
-        pass
+        return json.loads(response.text)
 
 
 class TagPeriod(Resource):
@@ -59,4 +61,6 @@ class TagPeriod(Resource):
         start = time_manager.datetime_to_timestamp(request.args.get('start'))
         end = time_manager.datetime_to_timestamp(request.args.get('end'))
 
-        pass
+        params = {'start': start, 'end': end}
+        response = requests.get(info.URL + 'sites/' + site_id + '/tags/' + tag_id + '/usages/periodic', headers=info.headers, params=params)
+        return json.loads(response.text)

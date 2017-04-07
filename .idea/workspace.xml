@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bf5f843-18a0-4b6e-ad66-7b7ae8dd34b3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful_modules/devices.py" afterPath="$PROJECT_DIR$/restful_modules/devices.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful_modules/sites.py" afterPath="$PROJECT_DIR$/restful_modules/sites.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful_modules/tags.py" afterPath="$PROJECT_DIR$/restful_modules/tags.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful_modules/usage.py" afterPath="$PROJECT_DIR$/restful_modules/usage.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +18,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="414">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -69,8 +66,8 @@
       <file leaf-file-name="usage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restful_modules/usage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state relative-caret-position="486">
+              <caret line="65" column="39" lean-forward="false" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -356,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491561006445</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="json 인코딩 관련 문제 해결">
+      <created>1491562422724</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1491562422724</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -390,7 +394,8 @@
     <MESSAGE value="info에 site name과 id 딕셔너리화, device와 site 조회 기능 구현 완료" />
     <MESSAGE value="간단한 로직 개선&#10;태그 get 모듈 추가, 리소스 확장, usage 모듈 작성 중" />
     <MESSAGE value="timestamp-time 사이 변환기 작성, usage 모듈 구체화 중" />
-    <option name="LAST_COMMIT_MESSAGE" value="timestamp-time 사이 변환기 작성, usage 모듈 구체화 중" />
+    <MESSAGE value="json 인코딩 관련 문제 해결" />
+    <option name="LAST_COMMIT_MESSAGE" value="json 인코딩 관련 문제 해결" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -402,16 +407,6 @@
         <state relative-caret-position="96">
           <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -469,10 +464,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/restful_modules/usage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="486">
+          <caret line="65" column="39" lean-forward="false" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>

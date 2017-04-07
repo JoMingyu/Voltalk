@@ -3,6 +3,7 @@
 from flask_restful import Resource
 from flask import request
 import json
+import time
 
 import requests
 from support import time_manager
@@ -28,6 +29,19 @@ class SitePeriod(Resource):
         return json.loads(response.text)
 
 
+class SiteToday(Resource):
+    def get(self):
+        # 오늘 에너지 사용량 조회
+        site_id = info.site_ids[request.args.get('where')]
+        start = time_manager.date_to_timestamp(time_manager.get_cur_datetime())
+        end = time_manager.datetime_to_timestamp(request.args.get('date'))
+        # today
+
+        params = {'start': start, 'end': end}
+        response = requests.get(info.URL + 'sites/' + site_id + '/usages/periodic', headers=info.headers, params=params)
+        return json.loads(response.text)
+
+
 class DeviceRealTime(Resource):
     def get(self):
         device = request.args.get('device')
@@ -41,6 +55,18 @@ class DevicePeriod(Resource):
         device = request.args.get('device')
         start = time_manager.datetime_to_timestamp(request.args.get('start'))
         end = time_manager.datetime_to_timestamp(request.args.get('end'))
+
+        params = {'start': start, 'end': end}
+        response = requests.get(info.URL + 'devices/' + device + '/usages/periodic', headers=info.headers, params=params)
+        return json.loads(response.text)
+
+
+class DeviceToday(Resource):
+    def get(self):
+        device = request.args.get('device')
+        start = time_manager.date_to_timestamp(time_manager.get_cur_datetime())
+        end = time_manager.datetime_to_timestamp(request.args.get('date'))
+        # today
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'devices/' + device + '/usages/periodic', headers=info.headers, params=params)
@@ -62,6 +88,19 @@ class TagPeriod(Resource):
         tag_id = request.args.get('tag')
         start = time_manager.datetime_to_timestamp(request.args.get('start'))
         end = time_manager.datetime_to_timestamp(request.args.get('end'))
+
+        params = {'start': start, 'end': end}
+        response = requests.get(info.URL + 'sites/' + site_id + '/tags/' + tag_id + '/usages/periodic', headers=info.headers, params=params)
+        return json.loads(response.text)
+
+
+class TagToday(Resource):
+    def get(self):
+        site_id = info.site_ids[request.args.get('where')]
+        tag_id = request.args.get('tag')
+        start = time_manager.date_to_timestamp(time_manager.get_cur_datetime())
+        end = time_manager.datetime_to_timestamp(request.args.get('date'))
+        # today
 
         params = {'start': start, 'end': end}
         response = requests.get(info.URL + 'sites/' + site_id + '/tags/' + tag_id + '/usages/periodic', headers=info.headers, params=params)

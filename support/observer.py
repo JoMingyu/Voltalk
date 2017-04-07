@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
 import threading
-
-from enertalk_infos import info
-from support import time_manager
-
 import requests
 import json
 import time
+
+from enertalk_infos import info
+from support import time_manager
 
 
 class Observer(threading.Thread):

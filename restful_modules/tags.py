@@ -3,8 +3,8 @@
 from flask_restful import Resource
 from flask import request
 import json
-
 import requests
+
 from enertalk_infos import info
 
 

@@ -3,9 +3,9 @@
 from flask_restful import Resource
 from flask import request
 import json
-
 import requests
 import datetime
+
 from support import time_manager
 from enertalk_infos import info
 

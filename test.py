@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import fbchat
-import time
 
 username = 'dmdkzm3@naver.com'
 password = 'uursty67a9e9e4'

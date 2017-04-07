@@ -3,8 +3,8 @@
 from flask_restful import Resource
 from flask import request
 import json
-
 import requests
+
 from support import time_manager
 from support import unit_conversion
 from enertalk_infos import info

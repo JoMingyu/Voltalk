@@ -15,8 +15,6 @@ class ChatBot(Resource):
         client.send(self.target_uid, msg)
         time.sleep(2)
         recieved_msg = client.getThreadInfo(self.target_uid, 3)
-        s = '부터'
-        print('부터'.encode('utf-8'))
 
         if '부터' in msg or '까지' in msg:
             # period
@@ -30,9 +28,12 @@ class ChatBot(Resource):
                 if 'today_usage' in msg.body:
                     data = {'message': msg.body.split(':')[1] + '만큼 사용되었습니다.'}
                     return data
-        else:
+        elif '현재' in msg or '지금' in msg:
             # site_usage
             for msg in recieved_msg:
                 if 'site_usage' in msg.body:
                     data = {'message': msg.body.split(':')[1] + '만큼 사용 중입니다.'}
                     return data
+        else:
+            data = {'message': msg.body}
+            return data

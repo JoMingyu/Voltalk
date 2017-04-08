@@ -14,11 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="362">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
               </folding>
@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tips.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful_modules/tips.py">
+      <file leaf-file-name="chatbot_relay.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/restful_modules/chatbot_relay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="452">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#25#59#0" expanded="true" />
               </folding>
@@ -71,11 +71,11 @@
         <option value="$PROJECT_DIR$/firebase.py" />
         <option value="$PROJECT_DIR$/support/observer.py" />
         <option value="$PROJECT_DIR$/firebase/fcm_sender.py" />
-        <option value="$PROJECT_DIR$/restful_modules/chatbot_relay.py" />
         <option value="$PROJECT_DIR$/support/power_consumptions.py" />
         <option value="$PROJECT_DIR$/support/tips.py" />
         <option value="$PROJECT_DIR$/restful_modules/consumptions.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/restful_modules/chatbot_relay.py" />
       </list>
     </option>
   </component>
@@ -635,14 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful_modules/chatbot_relay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-148">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restful_modules/usage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -659,6 +651,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/restful_modules/tips.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
@@ -669,12 +671,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/restful_modules/chatbot_relay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="452">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
-            <element signature="e#25#48#0" expanded="true" />
+            <element signature="e#25#59#0" expanded="true" />
           </folding>
         </state>
       </provider>

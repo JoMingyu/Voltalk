@@ -18,7 +18,9 @@ class ChatBot(Resource):
                 break
 
         recieved_msg = fb_account.client.getThreadInfo(3)
-
+        if '죄송합니다' in recieved_msg[0].body:
+            data = {'message': recieved_msg[0].body.replace('없어요', '없습니다')}
+            return data
         if '부터' in msg or '까지' in msg:
             # period
             for msg in recieved_msg:

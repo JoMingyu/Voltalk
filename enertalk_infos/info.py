@@ -3,7 +3,7 @@
 URL = 'http://api2.enertalk.com/'
 # API URL
 
-headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer 6a237c3b5a86899edc6c4832803ddad71547a06a77f96d47247811dfa8a4cf930f498f5cbffd9cf057caaca65bac30d56dd68f8cb13d7edce8efacf3e39beccd'}
+headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer eb76d3ab908462eb2232a57dda7a37e489785d7216f49e657d89239c51959fee88560b9920bebcad89c24881d2432b1f3375c924335ed6edc86a515cc3ada384'}
 # 액세스 토큰 관련 헤더
 
 site_ids = {'서울대 3동': 'a50873c0a43159d9ed9d3b7c1ecc6a8ade7480e6',

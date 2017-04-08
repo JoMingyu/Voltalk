@@ -21,6 +21,9 @@ from restful_modules import fare
 from restful_modules import chatbot_relay
 # 챗봇 커넥터
 
+from restful_modules import tips
+# 팁
+
 from support import observer
 # 전기 사용량 변동 디텍터
 
@@ -43,6 +46,9 @@ api.add_resource(usage.DeviceToday, '/usage/device/today')
 api.add_resource(usage.TagRealTime, '/usage/tag')
 api.add_resource(usage.TagPeriod, '/usage/tag/period')
 api.add_resource(usage.TagToday, '/usage/site/today')
+
+api.add_resource(tips.Consumptions, '/consumption')
+api.add_resource(tips.Tips, '/tip')
 
 api.add_resource(fare.SiteCurrent, '/fare/site')
 api.add_resource(fare.DeviceCurrent, '/fare/device')

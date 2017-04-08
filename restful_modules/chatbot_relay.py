@@ -28,12 +28,28 @@ class ChatBot(Resource):
                 if 'today_usage' in msg.body:
                     data = {'message': msg.body.split(':')[1] + '만큼 사용되었습니다.'}
                     return data
-        elif '현재' in msg or '지금' in msg:
+        elif ('현재' in msg or '지금' in msg) and '소비전력' not in msg:
             # site_usage
             for msg in recieved_msg:
                 if 'site_usage' in msg.body:
                     data = {'message': msg.body.split(':')[1] + '만큼 사용 중입니다.'}
                     return data
-        else:
-            data = {'message': msg.body}
-            return data
+        elif '소비전력' in msg:
+            # 소비전력
+            for msg in recieved_msg:
+                if '입니다' in msg.body:
+                    data = {'message': msg.body}
+                    return data
+        elif '팁' in msg or '조언' in msg:
+            # 팁
+            for msg in recieved_msg:
+                if '세요.' in msg.body:
+                    data = {'message': msg.body}
+                    return data
+        elif '전기요금' in msg or '전기세' in msg or '전기 사용료' in msg or\
+                        '전력 사용료' in msg or '전력사용료' in msg or '전기사용료' in msg:
+            # 전기요금
+            for msg in recieved_msg:
+                if '입니다' in msg.body:
+                    data = {'message': msg.body}
+                    return data

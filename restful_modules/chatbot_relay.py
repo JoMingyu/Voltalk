@@ -32,13 +32,13 @@ class ChatBot(Resource):
                 if 'today_usage' in msg.body:
                     data = {'message': msg.body.split(':')[1] + '만큼 사용되었습니다.'}
                     return data
-        elif '현재' in msg or '지금' in msg:
+        elif '현재' in msg or '지금' in msg or '소비량' in msg:
             # site_usage
             for msg in recieved_msg:
                 if 'site_usage' in msg.body:
                     data = {'message': msg.body.split(':')[1] + '만큼 사용 중입니다.'}
                     return data
-        elif '소비전력' in msg:
+        elif '소비전력' in msg or '예상' in msg:
             # 소비전력
             data = {'message': recieved_msg[0].body}
             return data
